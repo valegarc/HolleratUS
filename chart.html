@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tool Status</title>
+  <link rel="stylesheet" href="ASR4.css">
+</head>
+<body>
+    <div class="status-header">
+        <h1>Tool Status</h1>
+      </div>
+      
+      <div class="button-container">
+  <button onclick="askNewTool('Y/N')">Sharpen Tool</button>
+  <button onclick="createNewTool('Create')">Create New Tool</button>
+  <button onclick="checkToolScrap('Scrap')">Mark Tool Scrap</button>
+</div>
+  <table id="toolTable">
+    <thead>
+      <tr>
+        <th>Available</th>
+        <th>ID</th>
+        <th>Tool Status</th>
+        <th>Size</th>
+        <th>Date & Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Y</td>
+        <td>Tool A</td>
+        <td>Drag</td>
+        <td>28 inches</td>
+        <td>2023-12-01</td>
+      </tr>
+      <tr>
+        <td>X</td>
+        <td>Tool B</td>
+        <td>Cope</td>
+        <td>32 inches</td>
+        <td>2023-11-25</td>
+      </tr>
+      <tr>
+        <td>Y</td>
+        <td>Tool B</td>
+        <td>Tool</td>
+        <td>36 inches</td>
+        <td>2023-10-15</td>
+      </tr>
+      <tr>
+        <td>X</td>
+        <td>Tool B</td>
+        <td>Tool</td>
+        <td>42 inches</td>
+        <td>2023-11-25</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    
+    
+    </tbody>
+  </table>
+
+  <script src="A.js"></script>
+</body>
+</html>
