@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/toolSearch.css">
+    <title>Form Tool Search</title>
+</head>
+<body>
+
+
+    
+    <div class="back-button" onclick="homePageBack()"> </div>
+
+    <div class="container">
+        <input type="text" id="searchInput" oninput="searchTable()" placeholder="Search by Tool ID">
+        
+        <table id="moldTable">
+            <thead>
+                <tr>
+                    <th>Form Tool ID</th>
+                    <th>Status</th>
+                    <th>Size</th>
+                    <th>Date & Time Used</th>
+                    <th>Recent Mold ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- table rows added on java -->
+            </tbody>
+        </table>
+    </div>
+
+    <button class="back-button"><a href="operatorHome.html">
+        <img src="images/back-arrow.svg" width="70px"> 
+    </a></button>
+
+</body>
+<script src="scripts/toolSearch.js"></script>
+</html>

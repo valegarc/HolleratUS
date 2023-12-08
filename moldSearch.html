@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/moldSearch.css">
+    <title>Mold Search</title>
+</head>
+<body>
+    <button class="back-button" onclick="homePageBack()">
+        <img src="images/back-arrow.svg" width="70px"> 
+    </button>
+
+
+<div class="tableContainer">
+        <input type="text" id="searchInput" oninput="searchTable()" placeholder="Search by Mold ID">
+        
+        <table id="moldTable">
+            <thead>
+                <tr>
+                    <th>Mold ID</th>
+                    <th>Mold Type</th>
+                    <th>Date & Time Created</th>
+                </tr>
+            </thead>
+            <tbody> 
+            
+            </tbody>
+        </table>
+</div>
+
+
+</body>
+<script src="scripts/moldSearch.js"></script>
+</html>

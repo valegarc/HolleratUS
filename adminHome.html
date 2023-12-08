@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background-color:black;
+            color: #f0f0f0; /* Set text color to contrast with the background */
+            font-family: Arial, sans-serif; /* Set a default font family */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            width: 25%;
+            height: 20%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+        }
+
+        .text-box {
+            width: 100%;
+            background-color: #008080;
+            padding: 1px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 45px;
+            color: #000000;
+            
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button {
+            background-color: #008080;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .scrapButton {
+            text-decoration: none;
+            color: #000000;
+        }
+        .createTool {
+            text-decoration: none;
+            color: #000000;
+        }
+        .flagTool {
+            text-decoration: none;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="images/Amsted Logo 1.jpg" alt="Your Logo">
+        <div class="text-box">
+            <p>Welcome Admin</p>
+        </div>
+        <div class="buttons">
+            <button class="button"><a class="scrapButton"  href="markScrap.html"> Tool Search </a></button>
+            <button class="button"><a class="createTool" href="createTool.html"> Create Tool </a></button>
+            <button class="button"><a class="flagTool" href="adminFlag.html"> Flag Tool </a></button>
+            <button class="button">
+                <span style="color: red; font-size: 25px;">L</span>
+                <span style="color: blue; font-size: 25px;">D</span>
+                <span style="color: yellow; font-size: 25px;">R</span>
+        </button>
+        </div>
+    </div>
+</body>
+</html>

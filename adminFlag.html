@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .action-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .discard-button, .accept-button {
+            padding: 6px 10px;
+            cursor: pointer;
+        }
+
+        .accept-highlight {
+            background-color: yellow;
+        }
+
+        #backButton {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .row-actions {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button class="backButton"><a href="adminHome.html">
+        <img src="images/back-arrow.svg" width="70px"></a>
+    </button>
+    
+    <div id="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tool ID</th>
+                    <th>Flag Description</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>1237</td>
+                    <td>kJDakjsdKLJNCAKSJDNCKDSJC</td>
+                </tr>
+
+
+                <tr>
+                    <td>2947</td>
+                    <td>TACDJANLSCAKSDCJN</td>
+                </tr>
+                <tr>
+                    <td>3723</td>
+                    <td>SDCKJANSDLKCJNASDLKJC</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function discardRow(row) {
+            row.parentNode.removeChild(row);
+        }
+
+        function highlightRow(row) {
+            row.classList.toggle("accept-highlight");
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            var rows = document.querySelectorAll('#container table tbody tr');
+
+            rows.forEach(function(row) {
+
+                var discardButton = document.createElement('button');
+                discardButton.className = 'discard-button';
+                discardButton.textContent = 'Discard';
+                discardButton.addEventListener('click', function() {
+                    discardRow(row);
+                });
+
+                var acceptButton = document.createElement('button');
+                acceptButton.className = 'accept-button';
+                acceptButton.textContent = 'Accept';
+                acceptButton.addEventListener('click', function() {
+                    highlightRow(row);
+                });
+
+
+                var actionContainer = document.createElement('div');
+                actionContainer.className = 'row-actions';
+                actionContainer.appendChild(discardButton);
+                actionContainer.appendChild(acceptButton);
+
+                row.appendChild(actionContainer);
+            });
+        });
+    </script>
+</body>
+</html>

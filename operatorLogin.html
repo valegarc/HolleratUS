@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operator Login</title>
+    <link rel="stylesheet" type="text/css" href="styles/operatorLogin.css">
+</head>
+<body>
+    <div id="AdminLogin">
+    <a id=admin href="adminLogin.html" target="_blank">Admin Login</a>
+    </div>
+
+    <div class="overlay">
+        <div class="container">
+            <div class="login-container">
+                <h1>Login</h1>
+                <form id="loginForm">
+                    <div class="digit-input">
+                        <input autocomplete="off" type="text" id="digit1" name="digit1" required maxlength="1" pattern="[0-9]" title="Enter a single digit">
+                    </div>
+                    <div class="digit-input">
+                        <input autocomplete="off" type="text" id="digit2" name="digit2" required maxlength="1" pattern="[0-9]" title="Enter a single digit">
+                    </div>
+                    <div class="digit-input">
+                        <input autocomplete="off" type="text" id="digit3" name="digit3" required maxlength="1" pattern="[0-9]" title="Enter a single digit">
+                    </div>
+                    <div class="digit-input">
+                        <input autocomplete="off" type="text" id="digit4" name="digit4" required maxlength="1" pattern="[0-9]" title="Enter a single digit">
+                    </div>
+                    <button id="submit" type="submit">Login</button>
+                </form>
+                <p id="loginStatus"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/operatorLogin.js"></script>
+</body>
+</html>

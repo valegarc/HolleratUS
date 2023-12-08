@@ -1,0 +1,51 @@
+#timePunch {
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 3 px;
+    border-color: #616668b8;
+    border-radius: 20px;
+    background-color: #007193;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#timePunch:hover {
+    background-color: #00719389;
+}
+
+input {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 3 px;
+    border-color: #c7c7c7;
+    border-radius: 20px;
+    background-color: rgba(218, 218, 218, 0.251);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    cursor: text;  
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ebe8e2;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+}
+
+.useToolTitle {
+    color: white;
+}
+
+.homeButton {
+    position: relative;
+    bottom: -290px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" type="text/css" href="styles/adminLogin.css">
+</head>
+<body>
+    <div id="OperatorLogin">
+    <a id=operator class="top-right-button" href="operatorLogin.html">Operator Login</a>
+    </div>
+
+    <div class="container">
+        <div class="login-container">
+            <center><h1>Welcome</h1></center>
+            <form id="loginForm">
+                <input autocomplete="off" type="text" id="username" name="username" required placeholder="Username">
+                <input autocomplete="off" type="password" id="password" name="password" required placeholder="Password">
+                <button id="submit" type="submit">Login</button>
+            </form>
+            <p id="loginStatus"></p>
+        </div>
+
+    </div>
+
+    <script src="scripts/adminLogin.js"></script>
+</body>
+</html>
