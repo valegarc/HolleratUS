@@ -1,4 +1,4 @@
-/* Basic styles for the table */
+
 .center-heading {
     text-align: center;
   }
@@ -48,25 +48,19 @@
   }
   
   tr.selected {
-    background-color: #ffcccc; /* Change the background color for selected rows */
+    background-color: #ffcccc; 
   }
-  
-  /* Add this to your CSS file */
-  
-  /* Initially red color for dull rows */
+
   .dull-row {
     color: red;
   }
   
-  /* Style for selected dull rows */
   .selected-dull {
-    background-color: pink; /* Change to the color you want when selected */
-    /* You can add more styles for the selected dull rows */
+    background-color: pink;
   }
   
-  /* Style for scrap rows */
   .scrap-row {
-    color: black; /* Ensure scrap rows stay black */
+    color: black;
   }
   
   

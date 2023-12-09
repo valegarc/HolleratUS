@@ -53,7 +53,7 @@ function searchTable(event) {
     }
 }
 
-// Attach the event listener to the input element
+
 document.getElementById('searchInput').addEventListener('keydown', searchTable);
 
 populateTable();

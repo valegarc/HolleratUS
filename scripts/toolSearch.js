@@ -1,4 +1,4 @@
-// this is the data for the rows
+
 const moldData = [
     { id: '1234KC', status: 'Sharp', size: '28 in.', dateTime: '2023-11-15 12:00:00', recentmold: 1234},
     { id: '5678KC', status: 'Dull', size: '32 in.', dateTime: '2023-11-16 15:00:00', recentmold: 1111 },
