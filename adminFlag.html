@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,42 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            height: 100vh;
+            background: #ebe8e2;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         table {
-            width: 100%;
+            width: 80%;
             border-collapse: collapse;
-            margin-top: 20px;
+            background-color: aliceblue;
+            margin: 0 auto;
+            margin-bottom: 20px;
         }
 
-        th, td {
+        th,
+        td {
+            padding: 12px;
             border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+            text-align: center;
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: lightgray;
+            color: white;
         }
 
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .action-buttons {
-            display: flex;
-            align-items: center;
-        }
-
-        .discard-button, .accept-button {
+        .discard-button,
+        .accept-button {
             padding: 6px 10px;
             cursor: pointer;
         }
@@ -46,35 +52,40 @@
             background-color: yellow;
         }
 
-        #backButton {
+        .row-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .backButton {
             position: fixed;
             top: 10px;
             left: 10px;
-            padding: 10px;
             cursor: pointer;
-            background-color: #4caf50;
             color: #fff;
             border: none;
             border-radius: 5px;
         }
 
-        .row-actions {
-            display: flex;
-            gap: 10px;
+        table tr:nth-child(even) {
+            background-color: white;
         }
     </style>
 </head>
+
 <body>
     <button class="backButton"><a href="adminHome.html">
-        <img src="images/back-arrow.svg" width="70px"></a>
+            <img src="images/back-arrow.svg" width="70px"></a>
     </button>
-    
-    <div id="container">
+
+    <div class="container">
         <table>
             <thead>
                 <tr>
                     <th>Tool ID</th>
                     <th>Flag Description</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -84,11 +95,11 @@
                     <td>kJDakjsdKLJNCAKSJDNCKDSJC</td>
                 </tr>
 
-
                 <tr>
                     <td>2947</td>
                     <td>TACDJANLSCAKSDCJN</td>
                 </tr>
+
                 <tr>
                     <td>3723</td>
                     <td>SDCKJANSDLKCJNASDLKJC</td>
@@ -99,47 +110,18 @@
     </div>
 
     <script>
-        function discardRow(row) {
-            row.parentNode.removeChild(row);
-        }
+        document.addEventListener('click', function (event) {
+            var target = event.target;
 
-        function highlightRow(row) {
-            row.classList.toggle("accept-highlight");
-        }
-
-        function goBack() {
-            window.history.back();
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-
-            var rows = document.querySelectorAll('#container table tbody tr');
-
-            rows.forEach(function(row) {
-
-                var discardButton = document.createElement('button');
-                discardButton.className = 'discard-button';
-                discardButton.textContent = 'Discard';
-                discardButton.addEventListener('click', function() {
-                    discardRow(row);
-                });
-
-                var acceptButton = document.createElement('button');
-                acceptButton.className = 'accept-button';
-                acceptButton.textContent = 'Accept';
-                acceptButton.addEventListener('click', function() {
-                    highlightRow(row);
-                });
-
-
-                var actionContainer = document.createElement('div');
-                actionContainer.className = 'row-actions';
-                actionContainer.appendChild(discardButton);
-                actionContainer.appendChild(acceptButton);
-
-                row.appendChild(actionContainer);
-            });
+            if (target.classList.contains('discard-button')) {
+                var row = target.closest('tr');
+                row.parentNode.removeChild(row);
+            } else if (target.classList.contains('accept-button')) {
+                var row = target.closest('tr');
+                row.classList.toggle("accept-highlight");
+            }
         });
     </script>
 </body>
+
 </html>
