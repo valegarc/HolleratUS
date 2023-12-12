@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin Home </title>
     <style>
+        p {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
         body {
-            margin: 0;
-            background-color:black;
-            color: #f0f0f0; 
-            font-family: Arial, sans-serif;
+            background: #ebe8e2
         }
 
         .container {
@@ -19,24 +21,20 @@
         }
 
         .logo {
-            width: 25%;
-            height: 20%;
+            width: 10%;
             position: absolute;
-            top: 10px;
-            right: 10px;
-            border-radius: 5px;
+            top: 50px;
+            right: 40px;
         }
 
         .text-box {
             width: 100%;
-            background-color: #008080;
+            background-color: #007193;
             padding: 1px;
             box-sizing: border-box;
             border-radius: 20px;
             text-align: center;
             font-size: 45px;
-            color: #000000;
-            
         }
 
         .buttons {
@@ -45,7 +43,7 @@
         }
 
         .button {
-            background-color: #008080;
+            background-color: #007193;
             padding: 15px;
             box-sizing: border-box;
             border-radius: 10px;
@@ -53,26 +51,16 @@
             margin-bottom: 10px;
             text-align: center;
             font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
             cursor: pointer;
+            color: white;
         }
-        .scrapButton {
+        a {
             text-decoration: none;
-            color: #000000;
-        }
-        .createTool {
-            text-decoration: none;
-            color: #000000;
-        }
-        .flagTool {
-            text-decoration: none;
-            color: #000000;
-        }
-        .logoutButton{
-            text-decoration: none;
-            color: #000000;
+            color: white;
         }
         .logout {
-            background-color: #008080;
+            background-color: #007193;
             padding: 15px;
             box-sizing: border-box;
             border-radius: 10px;
@@ -80,19 +68,23 @@
             bottom: 0;
             left: 0;
             margin: 20px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img class="logo" src="images/Amsted Logo 1.jpg" alt="Your Logo">
+        <img class="logo" src="styles/amstedLogo.png" alt="Your Logo">
         <div class="text-box">
             <p>Welcome Admin</p>
         </div>
         <div class="buttons">
-            <button class="button"><a class="scrapButton"  href="markScrap.html"> Tool Search </a></button>
-            <button class="button"><a class="createTool" href="createTool.html"> Create Tool </a></button>
-            <button class="button"><a class="flagTool" href="adminFlag.html"> Flag Tool </a></button>
+            <button class="button"><a href="markScrap.html"> Tool Search </a></button>
+            <button class="button"><a href="createTool.html"> Create Tool </a></button>
+            <button class="button"><a href="adminFlag.html"> Flag Tool </a></button>
         </div>
     </div>
 
