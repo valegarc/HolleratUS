@@ -93,34 +93,30 @@
                 <tr>
                     <td>1237</td>
                     <td>kJDakjsdKLJNCAKSJDNCKDSJC</td>
+                    <td><input type="checkbox"></td>
                 </tr>
 
                 <tr>
                     <td>2947</td>
                     <td>TACDJANLSCAKSDCJN</td>
+                    <td><input type="checkbox"></td>
                 </tr>
 
                 <tr>
                     <td>3723</td>
                     <td>SDCKJANSDLKCJNASDLKJC</td>
+                    <td><input type="checkbox"></td>
                 </tr>
 
             </tbody>
         </table>
+
+        <button onclick="acceptRows()">Accept</button>
+<button onclick="discardRows()">Discard</button>
     </div>
 
     <script>
-        document.addEventListener('click', function (event) {
-            var target = event.target;
 
-            if (target.classList.contains('discard-button')) {
-                var row = target.closest('tr');
-                row.parentNode.removeChild(row);
-            } else if (target.classList.contains('accept-button')) {
-                var row = target.closest('tr');
-                row.classList.toggle("accept-highlight");
-            }
-        });
     </script>
 </body>
 
