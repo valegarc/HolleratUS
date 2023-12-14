@@ -1,18 +1,28 @@
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #007193
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+  height: 100vh;
+  margin: 0;
+  background: #ebe8e2;
+  font-family: Arial, sans-serif;
 }
 
-.button-list input,
-.button-list button {
-    display: block;
-    margin-bottom: 10px;
-    width: 200px;
-    padding: 5px;
+input {
+  display: flex;
+    flex-direction: column;
+    align-items: center; /* Optional: Center items horizontally */
+    text-align: center; /* Optional: Center text within each input */
+  padding: 20px 40px;
+  border: 3;
+  border-color: #c7c7c7;
+  border-radius: 20px;
+  background-color: rgba(218, 218, 218, 0.661);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-decoration: none;
+  cursor: text;   
 }
 
 .backButton {
