@@ -71,6 +71,20 @@
         table tr:nth-child(even) {
             background-color: white;
         }
+
+        .button {
+            background-color: #007193;
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            color: white;
+        }
     </style>
 </head>
 
@@ -91,28 +105,29 @@
             <tbody>
 
                 <tr>
-                    <td>1237</td>
-                    <td>kJDakjsdKLJNCAKSJDNCKDSJC</td>
+                    <td>1237KC</td>
+                    <td>Tool is chipped</td>
                     <td><input type="checkbox"></td>
                 </tr>
 
                 <tr>
-                    <td>2947</td>
-                    <td>TACDJANLSCAKSDCJN</td>
+                    <td>2947Keokuk</td>
+                    <td>Dull tool</td>
                     <td><input type="checkbox"></td>
                 </tr>
 
                 <tr>
-                    <td>3723</td>
-                    <td>SDCKJANSDLKCJNASDLKJC</td>
+                    <td>3723KC</td>
+                    <td>Tool size is not correct</td>
                     <td><input type="checkbox"></td>
                 </tr>
 
             </tbody>
         </table>
 
-        <button onclick="acceptRows()">Accept</button>
-<button onclick="discardRows()">Discard</button>
+        <button class="button">Accept</button>
+        <button class="button">Discard</button>
+        
     </div>
 
     <script>

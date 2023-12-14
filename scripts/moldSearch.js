@@ -31,8 +31,7 @@ function populateTable() {
     });
 }
 
-function searchTable(event) {
-    if (event.key === 'Enter') {
+function searchTable() {
         const input = document.getElementById('searchInput').value.trim().toUpperCase();
         const table = document.getElementById('moldTable');
         const rows = table.getElementsByTagName('tr');
@@ -41,9 +40,8 @@ function searchTable(event) {
             const moldId = rows[i].getElementsByTagName('td')[0];
             if (moldId) {
                 const idText = moldId.textContent || moldId.innerText;
-                const idValue = idText.trim().toUpperCase();
                 
-                if (idValue === input) {
+                if (idText.toUpperCase () .indexOf(input) > -1) {
                     rows[i].style.display = '';
                 } else {
                     rows[i].style.display = 'none';
@@ -51,10 +49,7 @@ function searchTable(event) {
             }
         }
     }
-}
 
-
-document.getElementById('searchInput').addEventListener('keydown', searchTable);
 
 populateTable();
 
