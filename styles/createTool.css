@@ -4,6 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #007193
 }
 
 .button-list input,
@@ -19,6 +20,10 @@ body {
   top: 0;
   left: 0;
   margin: 10px;
+    width: 2000px; /* Adjust the width as needed */
+    height: 10px; /* Adjust the height as needed */
+  
+  
 }
   
   /* Style for button text */

@@ -42,7 +42,7 @@ rows.forEach(row => {
   }
 });
 
-function markAsScrap() {
+function markAsScrap(status) {
   const rows = document.querySelectorAll('#data-chart tbody tr');
 
   const confirmation = confirm('Do you want to mark this tool as Scrap?');
@@ -92,3 +92,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+
+    markAsScrapBtn.textContent = 'Mark As Scrap';
+    markAsScrapBtn.addEventListener('click', () => markAsScrapOrDull('Scrap'));
+    markAsScrapBtn.style.marginRight = '10px'; // Adjust spacing if needed
+
+    const markAsDullBtn = document.createElement('button');
+    markAsDullBtn.textContent = 'Mark As Dull';
+    markAsDullBtn.addEventListener('click', () => markAsScrapOrDull('Dull'));
+
+    const buttonContainer = document.querySelector('.button-container');
+    buttonContainer.appendChild(markAsScrapBtn);
+    buttonContainer.appendChild(markAsDullBtn);
